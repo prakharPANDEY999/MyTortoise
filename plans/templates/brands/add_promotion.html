@@ -1,0 +1,24 @@
+{% extends 'plans/base.html' %}
+
+{% block content %}
+<center>
+  <h1>
+    Add Promotion
+  </h1>
+  <br/>
+  {% if submitted %}
+     You have added Promotion Successfully!
+
+  {% else %}
+  <form action="" method="POST">
+    {% csrf_token %}
+
+    {{ form.as_p }}
+
+    <input type="submit" value="Submit" class="btn btn-success">
+  </form>
+
+  {% endif %}
+</center>
+
+{% endblock %}

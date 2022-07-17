@@ -1,0 +1,18 @@
+{% extends 'brands/base.html' %}
+
+{% block content %}
+
+ <h1>Plans</h1>
+
+
+   {% for plan in plan_list %}
+   <strong>{{ plan }}</strong>
+   <ul>
+      <li>{{ plan.get_amountOptions_display }}</li>
+      <li>{{ plan.get_tenureOptions_display }}</li>
+      <li>{{ plan.benefitPercentage }}</li>
+      <li>{{ plan.get_benefitType_display }}</li>
+   </ul>
+   <br/>
+   {% endfor %} 
+ {% endblock %}
